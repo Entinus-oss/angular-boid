@@ -1,0 +1,44 @@
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+
+.menuLayer {
+  position: absolute;
+  height: 100%; 
+  width: 100%;
+}
+
+.resetButton {
+  position: absolute;
+  bottom: 3%;
+  left: 95%;
+  z-index: 2;
+  scale: 1.5
+}
+
+.sidebar {
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 8px 8px 0px;
+    padding-top: 40px;
+    height: 100vh;
+    left: 0px;
+    width:185px;
+    background-blend-mode: multiply;
+}
+
+.sidebarButton {
+  position: absolute;
+  z-index: 1;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<div class="menuLayer"> 
+    <div [@openCloseSidebar]="isOpen ? 'open' : 'closed'" class="sidebar">
+        <div>
+            <p>
+                Cohesion I/R
+                <span> 
+                    <mat-slider max="2" step="0.01" [(ngModel)]="param.cohesion" (input)="updateCohesion($event)"></mat-slider> 
+                    {{param.cohesion}}
+                </span>
+                <span> 
+                    <mat-slider max="100" step="1" [(ngModel)]="param.cohesionRadius" (input)="updateCohesionRadius($event)"></mat-slider>    
+                    {{param.cohesionRadius}}
+                </span>
+            </p>
+            <p>
+                Separation I/R
+                <span> 
+                    <mat-slider max="2" step="0.01" [(ngModel)]="param.separation" (input)="updateSeparation($event)"></mat-slider>
+                    {{param.separation}}
+                </span>
+                <span> 
+                    <mat-slider max="100" step="1" [(ngModel)]="param.separationRadius" (input)="updateSeparationRadius($event)"></mat-slider>
+                    {{param.separationRadius}}
+                </span>
+            </p>
+            <p>
+                Alignement I/R
+                <span> 
+                    <mat-slider thumbLabel max="2" step="0.01" [(ngModel)]="param.alignement" (input)="updateAlignement($event)"></mat-slider>
+                    {{param.alignement}}
+                </span>
+                <span> 
+                    <mat-slider thumbLabel max="100" step="1" [(ngModel)]="param.alignementRadius" (input)="updateAlignementRadius($event)"></mat-slider>
+                    {{param.alignementRadius}}
+                </span>
+           </p>
+            <p>
+                Population
+                <span> 
+                    <mat-slider thumbLabel max="600" [(ngModel)]="param.numberOfBoids" (input)="updateNumberOfBoids($event)"></mat-slider>
+                    {{param.numberOfBoids}}
+                </span>
+            </p>
+            <p>
+                Speed & Acceleration
+                <span> 
+                    <mat-slider thumbLabel max="10" step="0.1" [(ngModel)]="param.maxSpeed" (input)="updateMaxSpeed($event)"></mat-slider>
+                    {{param.maxSpeed}}
+                </span>
+                <span> 
+                    <mat-slider thumbLabel max="1" step="0.01" [(ngModel)]="param.maxAcceleration" (input)="updateMaxAcceleration($event)"></mat-slider>
+                    {{param.maxAcceleration}}
+                </span>
+            </p>
+            </div>  
+    </div>
+    <div class="sidebarButton">
+        <button  (click)="toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>    
+    </div>
+    <div class="resetButton">
+        <button (click)="reset()">
+            <mat-icon>autorenew</mat-icon> 
+        </button>    
+    </div>
+</div>
+
